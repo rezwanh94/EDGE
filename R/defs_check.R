@@ -73,7 +73,7 @@ check_config <- function(config=endr_defs,...){
 # check on data
 input_check <- function(dat) {
   # should be matrix
-  if (class(dat)=="matrix") {
+  if (class(dat)[1]=="matrix") {
     dat <- dat
   } else if (sum(class(dat)%in%c("data.frame","data.table"))) {
     dat <- as.matrix(dat)
